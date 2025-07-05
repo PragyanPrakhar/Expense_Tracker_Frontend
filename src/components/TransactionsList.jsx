@@ -19,7 +19,7 @@ export default function TransactionsList() {
 
   const fetchTransactions = async () => {
     try {
-      const response = await fetch(import.meta.env.VITE_BASE_URL+"/api/transaction/recentTransactions?limit=50")
+      const response = await fetch(import.meta.env.VITE_BASE_URL+"/api/transaction/recentTransactions?limit=10")
       if (response.ok) {
         const data = await response.json()
         setTransactions(data)
@@ -37,7 +37,7 @@ export default function TransactionsList() {
     e.stopPropagation()
 
     try {
-      const response = await fetch(import.meta.env.VITE_API_URL+`/api//transaction/deleteTransaction/${id}`, {
+      const response = await fetch(import.meta.env.VITE_API_URL+`/api/transaction/deleteTransaction/${id}`, {
         method: "DELETE",
       })
 
