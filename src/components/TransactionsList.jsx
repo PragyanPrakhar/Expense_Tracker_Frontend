@@ -19,7 +19,7 @@ export default function TransactionsList() {
 
   const fetchTransactions = async () => {
     try {
-      const response = await fetch(import.meta.env.VITE_BASE_URL+"/api//transaction/recentTransactions?limit=50")
+      const response = await fetch(import.meta.env.VITE_BASE_URL+"/api/transaction/recentTransactions?limit=50")
       if (response.ok) {
         const data = await response.json()
         setTransactions(data)
