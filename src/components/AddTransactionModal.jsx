@@ -56,7 +56,7 @@ export default function AddTransactionModal({
         try {
           console.log("BASE URl", import.meta.env.BASE_URL);
             const response = await fetch(
-                import.meta.env.VITE_BASE_URL + "/transaction/addTransaction",
+                import.meta.env.VITE_BASE_URL + "transaction/addTransaction",
                 {
                     method: "POST",
                     headers: {
