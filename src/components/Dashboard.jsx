@@ -19,9 +19,9 @@ export default function Dashboard() {
   const fetchDashboardData = async () => {
     try {
       const [totalResponse, categoryResponse, recentResponse] = await Promise.all([
-        fetch(import.meta.env.VITE_BASE_URL+"/transaction/totalExpense"),
-        fetch(import.meta.env.VITE_BASE_URL+"/transaction/categoryWiseExpense"),
-        fetch(import.meta.env.VITE_BASE_URL+"/transaction/recentTransactions?limit=5"),
+        fetch(import.meta.env.VITE_BASE_URL+"/api/transaction/totalExpense"),
+        fetch(import.meta.env.VITE_BASE_URL+"/api/transaction/categoryWiseExpense"),
+        fetch(import.meta.env.VITE_BASE_URL+"/api/transaction/recentTransactions?limit=5"),
       ])
 
       if (totalResponse.ok && categoryResponse.ok && recentResponse.ok) {

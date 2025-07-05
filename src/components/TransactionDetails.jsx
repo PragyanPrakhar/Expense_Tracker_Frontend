@@ -37,7 +37,7 @@ export default function TransactionDetails() {
         try {
             const response = await fetch(
                 import.meta.env.VITE_BASE_URL +
-                    "transaction/recentTransactions?limit=100"
+                    "/api/transaction/recentTransactions?limit=100"
             );
             if (response.ok) {
                 const data = await response.json();

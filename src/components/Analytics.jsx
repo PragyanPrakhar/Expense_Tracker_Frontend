@@ -19,8 +19,8 @@ export default function Analytics() {
   const fetchAnalyticsData = async () => {
     try {
       const [monthlyResponse, categoryResponse] = await Promise.all([
-        fetch(import.meta.env.VITE_BASE_URL+"/transaction/monthlyTransactions"),
-        fetch(import.meta.env.VITE_BASE_URL+"/transaction/categoryWiseExpense"),
+        fetch(import.meta.env.VITE_BASE_URL+"/api/transaction/monthlyTransactions"),
+        fetch(import.meta.env.VITE_BASE_URL+"/api/transaction/categoryWiseExpense"),
       ])
 
       if (monthlyResponse.ok && categoryResponse.ok) {
